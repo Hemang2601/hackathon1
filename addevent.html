@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Certificate Generator</title>
+    <!-- Include FontAwesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-image: url(https://wallpapers.com/images/featured/black-gold-background-optua4rlhb9gnk6t.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            font-size: 28px;
+        }
+
+        .icon {
+            margin-right: 10px;
+            color: #007acc;
+        }
+        main {
+            max-width: 500px;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.5);
+            background-repeat: no-repeat;
+            padding-left: 50px;
+            padding-right: 70px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+        }
+
+        form {
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #007acc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #005b9f;
+        }
+        .back-button {
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+        }
+
+        .back-button a {
+            text-decoration: none;
+            background-color: #007acc;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button a:hover {
+            background-color: #005b9f;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>New Event</h1>
+    </header>
+    <main>
+        <form method="POST" action="addevent.php">
+            <label for="eventid"><i class="fas fa-calendar-alt icon"></i>Event ID</label>
+            <input type="text" id="eventid" name="eventid" required>
+
+            <label for="eventname"><i class="fas fa-calendar-plus icon"></i>Event Name</label>
+            <input type="text" id="eventname" name="eventname" required>
+
+            <label for="date"><i class="far fa-calendar icon"></i>Date</label>
+            <input type="text" id="date" name="date" required>
+
+            <label for="organization_name"><i class="fas fa-building icon"></i>Organization Name</label>
+            <input type="text" id="organization_name" name="organization_name" required>
+
+            <input type="submit" value="Add Event">
+        </form>
+    </main>
+    <div class="back-button">
+        <a href="admindashboard.html">Back</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customize</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-image: url(https://wallpapers.com/images/featured/black-gold-background-optua4rlhb9gnk6t.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+        }
+
+        .certificate-demo {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .certificate-demo img {
+            max-width: 180px;
+            max-height: 150px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form {
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input[type="color"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #007acc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #005b9f;
+        }
+        .back-button {
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+        }
+
+        .back-button a {
+            text-decoration: none;
+            background-color: #007acc;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button a:hover {
+            text-decoration: none;
+            background-color: #005b9f;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Customize Certificate Templates</h1>
+    </header>
+
+    <main>
+        <div class="certificate-demo">
+            <img id="template1" src="https://img.freepik.com/free-vector/elegant-blue-gold-diploma-certificate-template_1017-17257.jpg" alt="Certificate Template 1">
+            <img id="template2" src="https://img.freepik.com/free-vector/elegant-blue-gold-diploma-certificate-template_1017-17257.jpg" alt="Certificate Template 2">
+            <img id="template3" src="https://img.freepik.com/free-vector/elegant-blue-gold-diploma-certificate-template_1017-17257.jpg" alt="Certificate Template 3">
+            <img id="template4" src="https://img.freepik.com/free-vector/elegant-blue-gold-diploma-certificate-template_1017-17257.jpg" alt="Certificate Template 4">
+        </div>
+
+        <form id="customizeForm" action="customize.php" method="POST">
+            <label for="template">Select Template:</label>
+            <select id="templateSelect" name="template">
+                <option value="template1">Template 1</option>
+                <option value="template2">Template 2</option>
+                <option value="template3">Template 3</option>
+                <option value="template4">Template 4</option>
+            </select><br>
+
+            <label for="backgroundColor">Background Color:</label>
+            <input type="color" id="backgroundColor" name="backgroundColor"><br>
+
+            <label for="textColor">Text Color:</label>
+            <input type="color" id="textColor" name="textColor"><br>
+
+            <label for="fontSize">Font Size:</label>
+            <input type="number" id="fontSize" name="fontSize" min="12" max="36"><br>
+
+            <input type="submit" value="Apply Customization">
+        </form>
+    </main>
+    <div class="back-button">
+        <a href="admindashboard.html">Back</a>
+    </div>
+
+    <script>
+        document.getElementById('templateSelect').addEventListener('change', function() {
+            const selectedTemplate = this.value;
+            const imgElement = document.getElementById(selectedTemplate);
+            imgElement.src = `https://new-image-url-for-${selectedTemplate}.jpg`;
+        });
+    </script>
+</body>
+</html>

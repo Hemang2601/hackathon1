@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Certificate Generator</title>
+    <!-- Include FontAwesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /*  body {
+            background-image: url(https://wallpapers.com/images/featured/black-gold-background-optua4rlhb9gnk6t.jpg);
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }*/
+        body {
+            
+            background-image: url(adminbackground.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        /*header {
+            background-image: url(https://wallpapers.com/images/featured/black-gold-background-optua4rlhb9gnk6t.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }*/     
+        header {
+           /* background-image: url(adminbackground.jpg);*/
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        h1 {
+            font-size: 28px;
+        }
+
+        main {
+            max-width: 500px;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.5);
+            background-repeat: no-repeat;
+            padding-left: 50px;
+            padding-right: 70px;
+            padding-top: 50px;
+            padding-bottom: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+        }
+
+        form {
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #007acc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #005b9f;
+            
+        }
+
+        /* Add styles for icons */
+        .icon {
+            margin-right: 5px;
+            color: #007acc;
+        }
+
+        /* Slider Styles */
+        .slider-container {
+            overflow: hidden;
+            position: relative;
+            height: 200px; /* Adjust the height as needed */
+            margin-top: 10px;
+        }
+
+        .slider-content {
+            white-space: nowrap;
+            animation: slide 15s linear infinite; /* Adjust the duration as needed */
+        }
+
+        .slider-image {
+            display: inline-block;
+            width: 300px; /* Adjust the width as needed */
+            height: 200px; /* Adjust the height as needed */
+            margin-right: 20px; /* Adjust the spacing between images */
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: rgba(255, 255, 255, 0.5);
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+        }
+
+      /* Add styles for the "Back" button */
+        .center-button {
+            text-align: center;
+        }
+
+        .back-button {
+            background-color: #007acc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none; /* Remove default underline */
+            display: inline-block; /* Prevent button from taking full width */
+        }
+
+        .back-button:hover {
+            background-color: #005b9f;
+        } 
+
+          /* Footer Styles */
+          .footer {
+            margin-top: 20px;
+            color: #555;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #007acc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Certificate Generator</h1>
+    </header>
+
+    <main>
+        <form id="certificateForm" method="POST" action="publicdashboard.php">
+            <label for="participantName"><i class="fas fa-user icon"></i>Participant Name:</label>
+            <input type="text" id="participantName" name="participantName" required><br>
+
+            <label for="courseName"><i class="fas fa-book icon"></i>Course Name:</label>
+            <input type="text" id="courseName" name="courseName" required><br>
+
+            <label for="date"><i class="far fa-calendar-alt icon"></i>Date:</label>
+            <input type="text" id="date" name="date" required><br>
+
+            <label for="organizationName"><i class="fas fa-building icon"></i>Organization Name:</label>
+            <input type="text" id="organizationName" name="organizationName" required><br>
+
+            <input type="submit" value="Generate Certificate">
+        </form>
+        <div class="footer">
+            <p>Get your event certification now!</p>
+    
+            <p>&copy; 2023 Event Certification</p>
+            <p>Designed by <a href="#">Hackathon Group</a></p>
+        </div>
+    </main>
+
+
+    <!-- Center-align the "Back" button -->
+    <div class="center-button">
+        <a href="indexpage.html" class="back-button"><i class="fas fa-arrow-left"></i> Back</a>
+    </div>
+
+    <!-- Slider Section -->
+    <div class="slider-container">
+        <div class="slider-content">
+            <img class="slider-image" src="https://img.freepik.com/free-vector/elegant-blue-gold-diploma-certificate-template_1017-17257.jpg" alt="Image 1">
+            <img class="slider-image" src="https://img.freepik.com/free-vector/elegant-blue-gold-diploma-certificate-template_1017-17257.jpg" alt="Image 2">
+            <img class="slider-image" src="https://img.freepik.com/free-vector/elegant-blue-gold-diploma-certificate-template_1017-17257.jpg" alt="Image 3">
+            <img class="slider-image" src="https://img.freepik.com/free-vector/elegant-blue-gold-diploma-certificate-template_1017-17257.jpg" alt="Image 4">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Help</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-image: url(https://wallpapers.com/images/featured/black-gold-background-optua4rlhb9gnk6t.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .help-container {
+            max-width: 800px;
+            margin: 0 auto;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 28px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .contact-info {
+            display: none; /* Initially hide contact details */
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+
+        .back-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-button a {
+            text-decoration: none;
+            color: #007acc;
+            font-size: 18px;
+        }
+
+        .back-button a:hover {
+            text-decoration: underline;
+        }
+
+        .help-button {
+            background-color: #007acc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        .help-button:hover {
+            background-color: #005b9f;
+        }
+
+        .back-button {
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+        }
+
+        .back-button a {
+            text-decoration: none;
+            background-color: #007acc;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button a:hover {
+            background-color: #005b9f;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Need Help?</h1>
+    </header>
+
+    <div class="help-container">
+        <p>If you need assistance or have any questions, please don't hesitate to contact our support team. We're here to help!</p>
+
+        <div class="contact-info" id="contactInfo">
+            <h2>Contact Information</h2>
+            <p><strong>Name:</strong> Hemang Lakhadiya</p>
+            <p><strong>Email:</strong> hemanglakhadiya@gmail.com</p>
+            <p><strong>Phone:</strong> 789 456 123</p>
+        </div>
+
+        <button class="help-button" id="showHelpButton">Show Contact Details</button>
+    </div>
+
+    <div class="back-button">
+        <a href="admindashboard.html">Back</a>
+    </div>
+
+    <script>
+        // JavaScript to toggle the visibility of the contact details and change button text
+        const showHelpButton = document.getElementById("showHelpButton");
+        const contactInfo = document.getElementById("contactInfo");
+
+        showHelpButton.addEventListener("click", () => {
+            if (contactInfo.style.display === "none" || contactInfo.style.display === "") {
+                contactInfo.style.display = "block";
+                showHelpButton.textContent = "Hide Contact Details";
+            } else {
+                contactInfo.style.display = "none";
+                showHelpButton.textContent = "Show Contact Details";
+            }
+        });
+    </script>
+</body>
+</html>

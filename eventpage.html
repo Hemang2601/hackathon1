@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>University's Events</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-image: url(https://wallpapers.com/images/featured/black-gold-background-optua4rlhb9gnk6t.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .event-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            flex-wrap: wrap; /* Allow events to wrap to the next row */
+            text-align: justify;
+        }
+
+        .event {
+            width: calc(30% - 20px);
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+        }
+
+        .event:hover {
+            transform: translateY(-5px); /* Add a slight lift effect on hover */
+        }
+
+        .event img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .event h2 {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        .event p {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .event:nth-child(odd) {
+            order: 1; /* Place odd-numbered events on the left */
+        }
+
+        .event:nth-child(even) {
+            order: 2; /* Place even-numbered events on the right */
+        }
+
+        .back-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-button a {
+            text-decoration: none;
+            background-color: #007acc;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button a:hover {
+            background-color: #005b9f;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>University's Events</h1>
+    </header>
+
+    <div class="event-container">
+        <!-- Event 1 -->
+        <div class="event">
+            <img src="event1.jpg" alt="Event 1">
+            <h2>Kabaddi </h2>
+            <p>At Atmiya University, the spirit of unity and competition comes 
+                alive with the annual Kabaddi tournament that brings together students 
+                from various university departments. This thrilling event fosters camaraderie and
+                sportsmanship as participants showcase their skills and teamwork on the Kabaddi mat.
+                With enthusiastic cheers from the sidelines, these departmental clashes create an
+                electrifying atmosphere on campus. Students engage in intense battles, demonstrating agility,
+                strength, and strategic thinking. The Kabaddi tournament not only promotes physical fitness but
+                also strengthens the bonds among departments, making it a highlight of the university's sporting calendar.</p>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="event">
+            <img src="event2.jpg" alt="Event 2">
+            <h2>Basketball</h2>
+            <p>Join us for an exciting game of basketball at Atmiya University. 
+                Show off your dribbling skills, make those slam dunks, 
+                and be a part of the fast-paced action on the court.
+                 Whether you're a seasoned player or a rookie, 
+                 this event welcomes all basketball enthusiasts.
+                  Get ready to shoot some hoops, compete with fellow players, 
+                  and have a ball of a time! Don't miss out on this thrilling
+                   basketball event that promises fun and friendly competition.</p>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="event">
+            <img src="event3.jpg" alt="Event 3">
+            <h2>Cricket </h2>
+            <p>At Atmiya University, an exciting cricket tournament is set to take place,
+                 pitting the various university departments against each other. 
+                 This event promises to be a thrilling showcase of talent and sportsmanship,
+                  as students and faculty from different departments come together 
+                  to compete on the cricket field. It's an opportunity for participants 
+                  to not only display their cricketing skills but also foster a sense 
+                  of camaraderie and teamwork within the university community. 
+                  This cricket tournament serves as a platform for students to engage in
+                   healthy competition and build lasting memories while celebrating the
+                    spirit of sports at Atmiya University.</p>
+        </div>
+
+        <!-- Event 4 -->
+        <div class="event">
+            <img src="event4.jpg" alt="Event 4">
+            <h2>Kho kho</h2>
+            <p>"At Atmiya University, a thrilling Kho Kho event recently unfolded,
+                fostering friendly competition among various university departments. 
+                This exciting inter-departmental tournament showcased the exceptional
+                athleticism and teamwork of our students. With teams representing different 
+                academic disciplines, the Kho Kho event provided a platform for students to
+                display their agility, strategic thinking, and sportsmanship. It was an occasion
+                that not only promoted physical fitness but also strengthened bonds within
+                our academic community. The enthusiastic participation and spirited matches
+                made this event a memorable experience for everyone involved, highlighting the
+                vibrant sports culture that thrives at our university."</p>
+        </div>
+
+        <!-- Event 5 -->
+        <div class="event">
+            <img src="event5.jpg" alt="Event 5">
+            <h2>Chess</h2>
+            <p>"Atmiya University is thrilled to host an exhilarating Chess Competition that
+                will bring together the brightest minds from every department across the campus.
+                This grand event promises to be a battle of wits and strategy, where participants 
+                will showcase their chess prowess and tactical acumen. With intense rivalry and friendly camaraderie,
+                this competition serves as a platform for students and faculty members to engage in intellectual
+                combat. It's a celebration of intellect and sportsmanship, fostering a sense of unity and healthy
+                competition within the university. Join us in this chess extravaganza and be a part of
+                a memorable clash of minds!"</p>
+        </div>
+    </div>
+
+    <div class="back-button">
+        <a href="admindashboard.html">Back</a>
+    </div>
+</body>
+</html>

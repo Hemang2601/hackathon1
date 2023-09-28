@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Certificate Generator</title>
+    <!-- Include FontAwesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+      /*  body {
+            background-image: url(https://wallpapers.com/images/featured/black-gold-background-optua4rlhb9gnk6t.jpg);
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }*/
+        body {
+            
+            background-image: url(adminbackground.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        /*header {
+            background-image: url(https://wallpapers.com/images/featured/black-gold-background-optua4rlhb9gnk6t.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }*/     
+        header {
+            background-image: url(adminbackground.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            font-size: 28px;
+        }
+
+        main {
+            max-width: 500px;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.5);
+            background-repeat: no-repeat;
+            padding-left: 50px;
+            padding-right: 70px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+        }
+
+        form {
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #007acc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #005b9f;
+        }
+
+        /* Add styles for icons */
+        .icon {
+            margin-right: 5px;
+            color: #007acc;
+        }
+
+        /* Slider Styles */
+        .slider-container {
+            overflow: hidden;
+            position: relative;
+            height: 200px; /* Adjust the height as needed */
+        }
+
+        .slider-content {
+            white-space: nowrap;
+            animation: slide 15s linear infinite; /* Adjust the duration as needed */
+        }
+
+        .slider-image {
+            display: inline-block;
+            width: 300px; /* Adjust the width as needed */
+            height: 200px; /* Adjust the height as needed */
+            margin-right: 20px; /* Adjust the spacing between images */
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: rgba(255, 255, 255, 0.5);
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+        }
+
+        /* Style the dropdown container */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Style the dropdown button */
+        .dropdown a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        /* Style the dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 1);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        /* Style the dropdown links */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 6px;
+            text-decoration: none;
+            display: block;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        /* Change color on hover */
+        .dropdown-content a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Show the dropdown content when hovering over the dropdown button */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Certificate Generator</h1>
+    </header>
+
+    <nav>
+        <a href="customize.html"><i class="fas fa-paint-brush icon"></i>Customize</a>
+        <div class="dropdown">
+            <a href="#"><i class="far fa-calendar-alt icon"></i>Events</a>
+            <div class="dropdown-content">
+                <a href="eventpage.html"><i class="fas fa-eye icon"></i>View</a>
+                <a href="addevent.html"><i class="fas fa-calendar-plus icon"></i>AddEvent</a>
+            </div>
+        </div>
+        <a href="helppage.html"><i class="far fa-question-circle icon"></i>Help</a>
+        <a href="#" id="logoutButton"><i class="fas fa-sign-out-alt icon"></i>Logout</a>
+    </nav>
+
+    <main>
+        <form id="certificateForm" method="POST" action="admindashboard.php">
+            <label for="participantName"><i class="fas fa-user icon"></i>Participant Name:</label>
+            <input type="text" id="participantName" name="participantName" required><br>
+
+            <label for="courseName"><i class="fas fa-book icon"></i>Course Name:</label>
+            <input type="text" id="courseName" name="courseName" required><br>
+
+            <label for="date"><i class="far fa-calendar-alt icon"></i>Date:</label>
+            <input type="text" id="date" name="date" required><br>
+
+            <label for="organizationName"><i class="fas fa-building icon"></i>Organization Name:</label>
+            <input type="text" id="organizationName" name="organizationName" required><br>
+
+            <input type="submit" value="Generate Certificate">
+        </form>
+    </main>
+
+    <!-- Slider Section -->
+    <div class="slider-container">
+        <div class="slider-content">
+            <img class="slider-image" src="https://img.freepik.com/free-vector/elegant-blue-gold-diploma-certificate-template_1017-17257.jpg" alt="Image 1">
+            <img class="slider-image" src="https://img.freepik.com/free-vector/elegant-blue-gold-diploma-certificate-template_1017-17257.jpg" alt="Image 2">
+            <img class="slider-image" src="https://img.freepik.com/free-vector/elegant-blue-gold-diploma-certificate-template_1017-17257.jpg" alt="Image 3">
+            <img class="slider-image" src="https://img.freepik.com/free-vector/elegant-blue-gold-diploma-certificate-template_1017-17257.jpg" alt="Image 4">
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle the logout confirmation
+        document.getElementById("logoutButton").addEventListener("click", function() {
+            var confirmLogout = confirm("Are you sure you want to logout?");
+            if (confirmLogout) {
+                // Redirect to the logout page or perform logout action here
+                window.location.href = "adminlogout.php"; // Change this to the actual logout page or action
+            }
+        });
+    </script>
+
+</body>
+</html>
